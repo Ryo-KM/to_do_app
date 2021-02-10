@@ -1,0 +1,422 @@
+
+body {
+  background-color: #ADD8E6;
+  color: #333;
+  text-align: center;
+}
+
+
+/* オープニングシャッター開始 */
+.shutter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1e1e1e;
+  z-index: 9999;
+  -webkit-animation: byeShutter 2.6s forwards;
+          animation: byeShutter 2.6s forwards;
+}
+.shutter::before, .shutter::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+.shutter::before {
+  background-color: #b5a58b;
+  width: 0;
+  height: 1px;
+  -webkit-animation: shutterOpen1 2.6s forwards;
+          animation: shutterOpen1 2.6s forwards;
+}
+.shutter::after {
+  width: 120%;
+  height: 0;
+  margin-left: -10%;
+  background-color: #f3f3f3;
+  -webkit-animation: shutterOpen2 2.6s forwards;
+          animation: shutterOpen2 2.6s forwards;
+}
+
+.content {
+  -webkit-animation: contentScale 2.6s forwards;
+          animation: contentScale 2.6s forwards;
+}
+
+@-webkit-keyframes byeShutter {
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+}
+
+@keyframes byeShutter {
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+}
+@-webkit-keyframes shutterOpen1 {
+  0% {
+    width: 0;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  90% {
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+@keyframes shutterOpen1 {
+  0% {
+    width: 0;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  90% {
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+@-webkit-keyframes shutterOpen2 {
+  60% {
+    width: 120%;
+    height: 0;
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  90% {
+    width: 120%;
+    height: 100%;
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  100% {
+    width: 120%;
+    height: 100%;
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+@keyframes shutterOpen2 {
+  60% {
+    width: 120%;
+    height: 0;
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  90% {
+    width: 120%;
+    height: 100%;
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  100% {
+    width: 120%;
+    height: 100%;
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+}
+@-webkit-keyframes contentScale {
+  70% {
+    -webkit-transform: perspective(800px) scale(0.9) rotateX(15deg);
+            transform: perspective(800px) scale(0.9) rotateX(15deg);
+  }
+  100% {
+    -webkit-transform: perspective(800px) scale(1) rotateX(0);
+            transform: perspective(800px) scale(1) rotateX(0);
+  }
+}
+@keyframes contentScale {
+  70% {
+    -webkit-transform: perspective(800px) scale(0.9) rotateX(15deg);
+            transform: perspective(800px) scale(0.9) rotateX(15deg);
+  }
+  100% {
+    -webkit-transform: perspective(800px) scale(1) rotateX(0);
+            transform: perspective(800px) scale(1) rotateX(0);
+  }
+}
+
+/* オープニングシャッター終了 */
+
+
+html{
+  background:url(http://thekitemap.com/images/feedback-img.jpg) no-repeat;
+  background-size: cover;
+  height:100%;
+}
+
+#feedback-page{
+	text-align:center;
+}
+
+#form-main{
+	width:100%;
+	float:left;
+	padding-top:0px;
+}
+
+#form-main h1{
+  margin-top: 40px;
+  font-family: serif,FakeBoss, Habibie, Precious;
+  font-size: 100px;
+  color: white;
+}
+
+#form-div {
+	background-color:rgba(72,72,72,0.4);
+	/* background-color:rgba(7, 8, 8, 0.4); */
+	padding-left:35px;
+	padding-right:35px;
+	padding-top:25px;
+	padding-bottom:40px;
+	width: 450px;
+	float: left;
+	left: 50%;
+	position: absolute;
+  margin-top:10px;
+	margin-left: -260px;
+}
+
+#signup{
+  color: white;
+  /* display: inline-block; */
+  text-align: center;
+  vertical-align: top;
+  height: 50px;
+  font-size: 20px;
+}
+
+#signup > a{
+  color: white;
+}
+
+.feedback-input {
+	color:#3c3c3c;
+	font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+	font-size: 18px;
+	border-radius: 0;
+	line-height: 22px;
+	background-color: #fbfbfb;
+	padding: 13px 13px 13px 54px;
+	margin-bottom: 10px;
+	width:100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+  border: 3px solid rgba(0,0,0,0);
+}
+
+.feedback-input:focus{
+	background: #fff;
+	box-shadow: 0;
+	border: 3px solid #3498db;
+	color: #3498db;
+	outline: none;
+  padding: 13px 13px 13px 54px;
+}
+
+.focused{
+	color:#30aed6;
+	border:#30aed6 solid 3px;
+}
+
+/* Icons ---------------------------------- */
+#password{
+	/* background-image: url(http://rexkirby.com/kirbyandson/images/name.svg); */
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#password:focus{
+	/* background-image: url(http://rexkirby.com/kirbyandson/images/name.svg); */
+	background-size: 30px 30px;
+	background-position: 8px 5px;
+  background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#email{
+	/* background-image: url(http://rexkirby.com/kirbyandson/images/email.svg); */
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#email:focus{
+	/* background-image: url(http://rexkirby.com/kirbyandson/images/email.svg); */
+	background-size: 30px 30px;
+  background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+	background-color:white;
+}
+
+#button-blue{
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	float:left;
+	width: 99%;
+	border: #fbfbfb solid 4px;
+	cursor:pointer;
+	background-color: #3498db;
+	color:white;
+	font-size:24px;
+	padding-top:22px;
+	padding-bottom:22px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+  text-decoration: none;
+}
+
+#button-blue:hover{
+	background-color: rgba(0,0,0,0);
+	color: #0493bd;
+}
+	
+.submit:hover {
+	color: #3498db;
+}
+	
+.ease {
+	width: 0px;
+	height: 74px;
+	background-color: #fbfbfb;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.submit:hover .ease{
+  width:100%;
+  background-color:white;
+}
+
+@media only screen and (max-width: 580px) {
+	#form-div{
+		left: 3%;
+		margin-right: 3%;
+		width: 88%;
+		margin-left: 0;
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+}
+
+
+.mycheckbox{
+  display: inline-block;
+  margin-right: 103px;
+}
+
+.mycheckbox input[type="checkbox"]{
+  display: none;
+}
+
+.mycheckbox input[type="checkbox"]+label{
+  margin-top: 35px;
+  display: none;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  padding-right: 10px;
+  color: white;
+}
+/* ラベルの左に表示させる正方形のボックス□ */
+.mycheckbox input[type="checkbox"]+label::before{
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  left: 0;
+  top: 50%;
+  border: 1px solid;
+  border-color:  white;
+  background-color: white;
+}
+
+.mycheckbox input[type="checkbox"]:checked+label::before{
+  background-color: #3498db;
+}
+
+/* チェックが入った時のレ点 */
+.mycheckbox input[type="checkbox"]:checked+label::after{
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  width: 18px;
+  height: 9px;
+  margin-top: -9px;
+  top: 50%;
+  left: 3px;
+  transform: rotate(-45deg);
+  border-bottom: 3px solid;
+  border-left: 3px solid;
+  border-color:  white;
+}
+
+#getpass{
+  color: #3498db;
+  cursor: pointer;
+}
+
+.SNS{
+  margin-top: 40px;
+  display: flex;
+}
+
+.SNS > p{
+  color: white;
+  display: inline-block;
+  margin-right: 116px;
+}
+
+.SNS img{
+  width: 56px;
+  height: 56px;
+  margin-left: 16px;
+  cursor: pointer;
+}

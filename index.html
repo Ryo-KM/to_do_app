@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Management Calender</title>
+  <link rel="stylesheet" href="css/open.css">
+</head>
+<body>
+  <div class="shutter"></div>
+  <section class="container">
+    <div class="content">
+      <div id="form-main">
+        <h1>- Task Management Calender -</h1>
+        <div id="form-div">
+          <form class="form" id="form1" method="post" action="login.php">
+            <p id="signup"><a href="signup.html">新規登録はコチラ</a></p>
+            
+            <p class="email">
+              <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" required/>
+            </p>
+            
+            <p class="password">
+              <input name="pass" type="password" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Password" id="password" required/>
+            </p>
+            
+            <div class="submit">
+              <input type="submit" value="LOG IN" id="button-blue">
+              <!-- <a href="calender.html" id="button-blue">LOG IN</a> -->
+              <div class="ease"></div>
+            </div>
+
+            <div class="mycheckbox">
+              <input id="sample3" value="1" type="checkbox"><label for="sample3">Remember me</label>
+            </div>
+            <span id="getpass">Recover your password</span>
+
+            <div class="SNS">
+              <p>
+                Or Sign in with
+              </p>
+              <img src="img/twitter.jpg" alt="">
+              <img src="img/facebook.png" alt="">
+              <img src="img/google.png" alt="">
+            </div>
+          </form>
+        </div>
+    </div>
+  </section>
+</body>
+</html>

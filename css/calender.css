@@ -1,0 +1,114 @@
+html{
+  background-image: url('../img/open_3.jpg');
+  background-repeat: none;
+  background-size: cover;
+}
+
+
+body{
+  width: 1040px;
+  margin: 50px auto 30px auto;
+  text-align: center;
+  font-family: serif;
+  /* background-color: rgba(31, 113, 190, 0.404); */
+  background-color: white;
+  font-family: UpperEastSide, KanshanScript;
+  padding-bottom: 40px;
+}
+
+#app_1 > h1{
+  padding-top: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.calender-title{
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  font-family: UpperEastSide, KanshanScript;
+  font-size: 40px;
+}
+
+
+.btn-monthMove{
+  font-size: 50px;
+  cursor: pointer;
+  margin: 20px 20px 0px 20px;
+  font-family: UpperEastSide, KanshanScript;
+}
+
+.calender-body{
+  width:100%;
+  table-layout:fixed;
+  margin-bottom: 20px;
+  color: #565656;
+  font-size: 5.1rem;
+  text-align: center;
+}
+
+/* カレンダーの1週間を作成する */
+.calender-body__item{
+  display: flex;
+  flex-wrap: wrap;
+  /* font-size: 40px; */
+}
+
+/* widthを丁度7つ入る幅に設定する */
+.calender-body__item > div,a{
+  box-sizing: border-box;
+  width: 13%;
+  height: 64px;
+  min-height: 48px;
+  padding: 12px 0;
+  text-align: center;
+  cursor:pointer;
+  font-size: 30px;
+  margin: 6px;
+}
+
+#day{
+  text-decoration: none;
+}
+
+
+.week_name > div:nth-of-type(7n-1){
+  color: #5a66a8;
+}
+.week_name > div:nth-of-type(7n){
+  color:#e29a9b;
+}
+
+.week_day > a:nth-of-type(7n-1){
+  color: #5a66a8;
+}
+.week_day > a:nth-of-type(7n){
+  color:#e29a9b;
+}
+
+.week_day > a:nth-of-type(7n-2){
+  color: black;
+}
+.week_day > a:nth-of-type(7n-3){
+  color: black;
+}
+.week_day > a:nth-of-type(7n-4){
+  color: black;
+}
+.week_day > a:nth-of-type(7n-5){
+  color: black;
+}
+.week_day > a:nth-of-type(7n-6){
+  color: black;
+}
+
+.calender-body__item > div a{
+  vertical-align: -4px;
+}
+
+.logout{
+  /* text-decoration: none; */
+  color: black;
+  margin-top: 32px;
+  font-size: 28px;
+}

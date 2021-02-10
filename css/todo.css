@@ -1,0 +1,287 @@
+
+
+html{
+  background-image: url('../img/todo1.jpeg');
+  background-size: cover;
+}
+
+body{
+  width: 1040px;
+  padding: 10px 50px 50px 50px;
+  margin: 30px auto 0px auto;
+  text-align: center;
+  font-family: serif;
+  background-color: white;
+  border-radius: 20px;
+}
+
+/* 前次日に移動するアクションを入れた場合このcssをオンにする必要あり */
+/* .header{
+  display: flex;
+  justify-content: space-between;
+} */
+
+.header > h1 {
+  font-size: 36px;
+  font-family: Bodoni72, AppleNextCondensed, AppleChancery, serif,KanshanScript, UpperEastSide;
+}
+
+.header > h1 > span{
+  color: red;
+}
+
+.header > p{
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.moveday{
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+
+.addItem{
+  margin-bottom: 36px;
+  margin-top: 26px;
+}
+
+.addItem > p{
+  font-size: 18px;
+  margin: 6px 0px;
+}
+
+#text{
+  width: 70%;
+  height: 30px;
+  font-size: 20px;
+}
+
+#time{
+  height: 31px;
+  font-size: 21px;
+}
+
+.addbtn{
+  height: 36px;
+  font-size: 21px;
+  border-radius: 0px;
+}
+
+
+.above_table{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.radio_box{
+  margin-left: 62px;
+}
+
+.radio{
+  font-size: 20px;
+}
+
+.radio input{
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin: 0px 3px 3px 6px;
+}
+
+.sort{
+  font-size: 20px;
+  margin-left: 6px;
+}
+
+.container{
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.alldelete {
+  display: inline-block;
+  width: 180px;
+  text-align: center;
+  background-color:blue;
+  border: 3px solid blue;
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 10px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.alldelete span {
+  position: relative;
+  z-index: 1;
+}
+
+.alldelete::before,
+.alldelete::after {
+  content: "";
+  display: block;
+  background-color: #0099e4;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: .2s;
+}
+
+.alldelete::before{
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.alldelete::after{
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+
+}
+
+.alldelete::before {
+  left: 0;
+}
+.alldelete::after {
+  right: 0;
+}
+.alldelete:hover:before,
+.alldelete:hover:after {
+  width: 0;
+  background-color: #FFF;
+}
+.alldelete:hover {
+  color: #FFF;
+}
+
+
+table{
+  margin: 10px 0px 0px 0px;
+}
+
+#app > table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.head{
+  width: 100%;
+  border-bottom: solid 3px #0099e4;
+}
+
+.head > th{
+  font-size: 20px;
+  padding-bottom: 6px;
+  color: #0099e4;
+}
+
+.No{
+  width: 10%;
+}
+.content{
+  width: 45%;
+}
+.start{
+  width: 10%;
+}
+.state{
+  width: 15%;
+}
+.edit_delete{
+  width: 10%;
+}
+
+
+
+.main{
+  background-color: white;
+  height: 35px;
+  font-size: 25px;
+  border-bottom: solid 1px gray;
+}
+
+.fin_main{
+  background-color: gray;
+}
+
+.main td:nth-child(1){
+  text-align: center;
+  /* color: red; */
+}
+.main td:nth-child(2){
+  text-align: left;
+  /* color: red; */
+}
+.main td:nth-child(3){
+  text-align: center;
+  /* color: red; */
+}
+.main td:nth-child(4){
+  text-align: center;
+  /* color: red; */
+}
+.main td:nth-child(5){
+  text-align: center;
+  /* color: red; */
+}
+.main td:nth-child(6){
+  text-align: center;
+  /* color: red; */
+}
+
+
+.btn {
+  border: none;
+  border-radius: 20px;
+  line-height: 24px;
+  padding: 2px 8px 2px 8px;
+  background: #0099e4;
+  color: #fff;
+  cursor: pointer;
+  /* vertical-align: middle; */
+}
+
+.btn_table{
+  font-size: 25px;
+}
+
+.left{
+  padding: 0px;
+}
+
+.right{
+  padding-top: 4px;
+  vertical-align: initial;
+}
+
+.most_right{
+  text-decoration: none;
+  padding-top: 1px;
+  padding-bottom: 2.4px;
+}
+
+.fin_cont{
+  text-decoration: line-through;
+  color: #dddddd;
+}
+
+.deletedesc{
+  font-size: 19px;
+  text-align: left;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+.returncal{
+  color: black;
+  margin-top: 18px;
+  font-size: 22px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
